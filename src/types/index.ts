@@ -49,9 +49,17 @@ export interface VendaWithDetails extends Venda {
   vendedor: Profile
 }
 
-// Cart item type for POS
+// Cart item type for POS (simplified version)
 export interface CartItem {
-  produto: Produto
+  produto: {
+    id: string
+    nome: string
+    marca: string
+    preco: number
+    estoque: number
+    unidade: string
+    ativo: boolean
+  }
   quantidade: number
   subtotal: number
 }

@@ -5,6 +5,8 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import { Layout } from './components/layout/Layout'
 import { LoginPage } from './pages/LoginPage'
 import { DashboardPage } from './pages/DashboardPage'
+import { ProdutosPage } from './pages/ProdutosPage'
+import { VendasPage } from './pages/VendasPage'
 import './index.css'
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -61,19 +63,13 @@ function AppRoutes() {
       {/* Placeholder routes for other pages */}
       <Route path="/vendas" element={
         <ProtectedRoute>
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Vendas</h1>
-            <p>Página de vendas em desenvolvimento...</p>
-          </div>
+          <VendasPage />
         </ProtectedRoute>
       } />
       
       <Route path="/produtos" element={
         <ProtectedRoute>
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Produtos</h1>
-            <p>Página de produtos em desenvolvimento...</p>
-          </div>
+          <ProdutosPage />
         </ProtectedRoute>
       } />
       
